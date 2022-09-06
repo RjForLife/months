@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Memories</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Memories</a>
+            <div class = "toggle"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Memories</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2 id="text"><span>its time to show u my</span><br>Love</h2>
+            <img src="bird1.png" id="bird1">
+            <img src="bird2.png" id="bird2">
+            <img src="forest.png" id="forest">
+            <a href="#redirect" id="btn">Find Out</a>
+            <img src="rocks.png" id="rocks">
+            <img src="water.png" id="water">
+        </section>
+        <div class="sec">
+            <h2 id="redirect">Abhishek ❤ Rati</h2>
+            <p>
+                First time, We met in avakin like i never imagined i will get someone like you,
+                then we became friends, shared our insta , we used to talk alot xD , trust me i really feel
+                like i am blessed to have you yesssssss, from the very beginning. you made a different place in my heart
+                from the very first day , pata nahi bss kaafi apna sa lagta tha 
+                <br>
+                Like i always felt everything is gonna be fine. I started sharing things with you and liteally you helped me 
+                stand by my side in almost every situation . and thats how i started feeling for you.
+                thodi der huii mujhe but ek din to kehna hi tha 
+                <br>
+                Pyaar karta hu tumse , Hadd se jyaada , tumhaari voice kese describe kru me chalo ek example deta hu
+                mera mood hdd se jyaada khrb ho and mujhe tumhaari voice sunne ko mile , ur voice kinda have healing powers lol
+                kisi bhi baat ka gum ho mai accha feel krne lagta tumhe  sunke , aur jab tum hssti hona . masallahhhhhh Dil pe paththar
+                rkh ke bhi tumhe hssta dekh lu firbhi dil tumse lag  hi jaana h,
+                <br>
+            
+            </p>
+        </div>
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+            const toggleMenu = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.onclick = function(){
+                toggleMenu.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+            
+        </script>
+    </body>
+</html>
